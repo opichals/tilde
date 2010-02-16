@@ -1,0 +1,5 @@
+mkdir xxx
+pushd xxx
+tar xOf ../$1 data.tar.gz | tar zxf -
+tar xf ../$1 metadata.gz
+gunzip metadata

@@ -1,0 +1,6 @@
+#!/bin/bash
+cfolder=`dirname "$BASH_SOURCE"`
+
+# run Firefox 2 using the ff2 profile
+cd "$cfolder"
+./firefox-bin -P ff2 -no-remote

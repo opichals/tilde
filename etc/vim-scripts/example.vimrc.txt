@@ -1,0 +1,124 @@
+
+
+From: http://hireath.homeunix.com/wordpress/?tag=cscope
+
+- cscope & ctags
+
+    cscope binary (Win32) : download
+    ctags binary (Win32): download
+
+- vim.rc ?? ??
+
+    color file (darkocean.vim) : download
+    taglist plugin (taglist.vim) : download
+
+    set nocompatible
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+     
+    colorscheme murphy
+    "colorscheme darkocean
+    syntax on
+    filetype plugin indent on
+     
+    set hlsearch
+    set incsearch
+     
+    set nobackup
+    set backspace=indent,eol,start
+     
+    set autoindent
+    set cindent
+    set smartindent
+     
+    set vb t_vb=
+    set mousehide
+    set novisualbell
+     
+    set shiftwidth=4
+    set tabstop=4
+    set softtabstop=4
+     
+    set showcmd
+    set showmatch
+    set ignorecase
+     
+    set title
+    set ruler
+     
+    " Map
+    " Don't use Ex mode, use Q for formatting
+    map Q gq
+    map
+    imap  "
+    map  :TlistToggle
+     
+    " Project entry
+    map  :view c:\Work\Batch\project\list.pro
+     
+    let Tlist_Auto_Open = 1
+    let Tlist_Show_Menu = 0
+    let Tlist_Exit_OnlyWindow = 1
+    let Tlist_File_Fold_Auto_Close = 1
+     
+    if has("cscope")
+    	set csprg=cscope
+    	set cscopetag
+    	set csto=0
+    	set nocsverb
+     
+    	if filereadable("cscope.out")
+    		cs add cscope.out
+    	elseif $CSCOPE_DB != ""
+    		cs add $CSCOPE_DB
+    	endif
+     
+    	set csverb
+     
+    	nmap s :cs find s =expand("")
+    	nmap g :cs find g =expand("")
+    	nmap c :cs find c =expand("")
+    	nmap t :cs find t =expand("")
+    	nmap e :cs find e =expand("")
+    	nmap f :cs find f =expand("")
+    	nmap i :cs find i ^=expand("")$
+    	nmap d :cs find d =expand("")
+    endif
+     
+    if has("gui_running")
+    	set guifont=Lucida_Console:h10
+    	set guioptions-=m
+    	set guioptions-=T
+    	set guioptions-=L
+    endif
+     
+    " Replace All tab char with Space
+    "auto BufReadPost *.h retab!4
+    "auto BufReadPost *.c retab!4
+    "auto BufReadPost *.cpp retab!4
+    "auto BufReadPost *.cxx retab!4
+     
+    " Environmental variables
+    let $CS="C:\Work\Batch\cscope\out\"
+     
+    function! ProjectLoad(name)
+    	let project = 'c:WorkBatchvim' . a:name . '.vim'
+    	exe 'cs add $CS' . a:name . '.out'
+    	if filereadable(project)
+    		exe "source " . project
+    	endif
+    	unlet project
+    endfunction
+     
+    function! ProjectIntroEnter()
+    	map  :call ProjectLoad('=expand("")')
+    endfunction
+     
+    function! ProjectIntroLeave()
+    	unmap
+    endfunction
+     
+    autocmd BufRead *.pro silent! call ProjectIntroEnter()
+    autocmd BufLeave *.pro silent! call ProjectIntroLeave()
+
+

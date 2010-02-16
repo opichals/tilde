@@ -1,0 +1,2 @@
+python2.6 -c'import fileinput, json; print(json.dumps(json.loads("".join(fileinput.input())), sort_keys=True, indent=4))'
+

@@ -1,0 +1,4 @@
+# ignore everything, know what to add
+*
+!.bash_profile
+!.vimrc
