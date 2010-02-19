@@ -3,4 +3,4 @@ HERE=`dirname $0`
 THIS=`basename $0`
 
 ROOT=$HERE/$ARCH/$THIS
-$ROOT/$THIS $*
+$ROOT/$THIS -conf $ROOT/jsl.default.conf -process $*
