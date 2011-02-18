@@ -10,6 +10,10 @@ export GIT_ROOT=/usr/local/git
 export PATH=/usr/local/bin:$PATH:$HOME/bin
 # add php5
 export PATH=/usr/local/php5/bin:$PATH
+# add mysql
+export PATH=/usr/local/mysql/bin:$PATH
+# prepend perl v5.10 path
+#export PATH=/usr/local/ActivePerl-5.10/bin:$PATH
 
 # my favourite editor
 export EDITOR=vi
