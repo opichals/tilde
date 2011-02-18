@@ -18,9 +18,6 @@ if &t_Co > 2 || has("gui_running")
       " MacVIM shift+arrow-keys behavior (required in .vimrc)
       let macvim_hig_shift_movement = 1
 
-      " Command+T plugin binding
-      map <Leader>t :CommandT <CR>
-
       " Make gvim bigger by default
       set columns=80 lines=53
 
@@ -36,10 +33,31 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" Visible trailing whitespace
 set list listchars=tab:\ \ ,trail:·
 
+" do 'cd /path' when editting '/path/name'
+" if exists('+autochdir')
+"    set autochdir
+"else
+"    autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
+"endif
+
+" Display line numbers
 " set number
+
+" Terminal window title with the edited file
+set title
+
 set ruler
+
+" command line-like completion
+set wildmenu
+set wildmode=list:longest
+
+" Maintain more context around the cursor
+set scrolloff=3
 
 " make uses real tabs
 au FileType make  set noexpandtab
