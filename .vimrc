@@ -1,6 +1,9 @@
 " turn leader to ',' instead of the default '\'
 let mapleader=" "
 
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
 " Turn on modelines, since gentoo turns them off
 set modeline
 
@@ -37,6 +40,8 @@ set expandtab
 " Visible trailing whitespace
 set list listchars=tab:\ \ ,trail:·
 
+runtime macros/matchit.vim
+
 " do 'cd /path' when editting '/path/name'
 " if exists('+autochdir')
 "    set autochdir
@@ -65,6 +70,11 @@ au FileType make  set noexpandtab
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+map <Leader>f :vimgrep <C-R>=expand("<cword>") . " **/*.js" <CR>
+
+set tags=tags;/
+map <Leader>d :tag <C-R>=expand("<cword>") <CR> <CR>
 
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *
