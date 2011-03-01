@@ -1,6 +1,6 @@
 alias ll='ls -lFG'
 
-export ARCH=osx
+export TILDEARCH=osx
 
 # root of the git install
 export GIT_ROOT=/usr/local/git

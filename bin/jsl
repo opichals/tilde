@@ -2,5 +2,5 @@
 HERE=`dirname $0`
 THIS=`basename $0`
 
-ROOT=$HERE/$ARCH/$THIS
+ROOT=$HERE/$TILDEARCH/$THIS
 $ROOT/$THIS $*
