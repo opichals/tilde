@@ -1,0 +1,6 @@
+#!/bin/bash
+HERE=`dirname $0`
+THIS=`basename $0`
+
+ROOT=$HERE/$TILDEARCH
+$ROOT/$THIS $*
