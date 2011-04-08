@@ -15,6 +15,8 @@ export PATH=/usr/local/mysql/bin:$PATH
 # prepend perl v5.10 path
 #export PATH=/usr/local/ActivePerl-5.10/bin:$PATH
 
+export PATH=$GIT_ROOT/bin:$PATH
+
 # my favourite editor
 export EDITOR=vi
 
