@@ -17,6 +17,10 @@ export PATH=/usr/local/mysql/bin:$PATH
 
 export PATH=$GIT_ROOT/bin:$PATH
 
+# nodejs config
+export NODE_PATH=$HOME/.node_modules/lib/node_modules
+export PATH=$PATH:$HOME/.node_modules/bin
+
 # my favourite editor
 export EDITOR=vi
 
