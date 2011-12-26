@@ -1,0 +1,10 @@
+[user]
+	name = Standa Opichal
+	email = opichals@gmail.com
+[alias]
+	co = checkout
+	ulog = log --oneline
+    llog = log --graph --decorate --pretty=oneline --abbrev-commit
+	mylog = log --author=opichals
+[color]
+	ui = auto
