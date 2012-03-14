@@ -22,7 +22,7 @@ if &t_Co > 2 || has("gui_running")
       let macvim_hig_shift_movement = 1
 
       " Make gvim bigger by default
-      set columns=80 lines=53
+      set columns=80 lines=68
 
       set guifont=DejaVu\ Sans\ Mono:h14
       set guioptions=
