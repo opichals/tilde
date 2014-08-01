@@ -4,7 +4,8 @@
 [alias]
 	co = checkout
 	ulog = log --oneline
-    llog = log --graph --decorate --pretty=oneline --abbrev-commit
+    llog = log --graph --decorate --format='%Cgreen%h %Cblue%aE %Cred%d %Creset%s' --abbrev-commit
 	mylog = log --author=opichals
+	unstage = reset HEAD --
 [color]
 	ui = auto
