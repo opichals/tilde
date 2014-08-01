@@ -1,5 +1,8 @@
 alias ll='ls -lFG'
 
+# rise the number of possibly open file descriptors
+ulimit -n 4096
+
 # do not put anything starting with a space into thistory
 export HISTCONTROL=ignorespace
 
@@ -20,6 +23,9 @@ export PATH=/usr/local/mysql/bin:$PATH
 export PATH=$PATH:$GIT_ROOT/bin
 # prepend perl v5.10 path
 #export PATH=/usr/local/ActivePerl-5.10/bin:$PATH
+
+# phantomjs wrapper env
+export PHANTOMJS_BIN=~/bin/phantomjs
 
 # default nodejs modules path (configured in ~/.npmrc)
 export NODE_PATH=$HOME/.node_modules/lib/node_modules
