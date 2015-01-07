@@ -67,6 +67,10 @@ set scrolloff=3
 " make uses real tabs
 au FileType make  set noexpandtab
 
+" using jj/jk is easier to type than ESC or C-[ for leaving insert mode
+inoremap jj <ESC>
+inoremap jk <ESC>
+
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
