@@ -12,6 +12,8 @@ export TILDEARCH=osx
 # root of the git install
 export GIT_ROOT=/usr/local/git
 
+# add git path
+export PATH=$GIT_ROOT/bin:$PATH
 # set /usr/local/bin (machine custom executables)
 # and ~/bin (user custom executables) PATH
 export PATH=/usr/local/bin:$PATH:$HOME/bin
@@ -19,8 +21,6 @@ export PATH=/usr/local/bin:$PATH:$HOME/bin
 export PATH=/usr/local/php5/bin:$PATH
 # add mysql
 export PATH=/usr/local/mysql/bin:$PATH
-# add git path
-export PATH=$PATH:$GIT_ROOT/bin
 # prepend perl v5.10 path
 #export PATH=/usr/local/ActivePerl-5.10/bin:$PATH
 
