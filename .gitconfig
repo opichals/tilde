@@ -9,3 +9,5 @@
 	unstage = reset HEAD --
 [color]
 	ui = auto
+[core]
+	pager = less -R
