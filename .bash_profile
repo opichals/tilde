@@ -24,8 +24,14 @@ export PATH=/usr/local/mysql/bin:$PATH
 # prepend perl v5.10 path
 #export PATH=/usr/local/ActivePerl-5.10/bin:$PATH
 
+# Java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home
+export M2_HOME=$HOME/Applications/apache-maven-3.2.5
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+
 # phantomjs wrapper env
-export PHANTOMJS_BIN=~/bin/phantomjs
+# export PHANTOMJS_BIN=~/bin/phantomjs
 
 # default nodejs modules path (configured in ~/.npmrc)
 export NODE_PATH=$HOME/.node_modules/lib/node_modules
