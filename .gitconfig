@@ -11,3 +11,4 @@
 	ui = auto
 [core]
 	pager = less -R
+	excludesfile = ~/.gitignore_global
