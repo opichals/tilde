@@ -48,4 +48,11 @@ for f in ~/etc/profile.d/*.sh; do
     source $f
 done
 
+# use the ~/etc/profile.d configured values
+export http_proxy=$HTTP_PROXY
+export https_proxy=$HTTPS_PROXY
+export ftp_proxy=$HTTP_PROXY
+export rsync_proxy=$HTTP_PROXY
+#export no_proxy="localhost,127.0.0.0/8,172.16.0.0/12,192.168.0.0./16"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
