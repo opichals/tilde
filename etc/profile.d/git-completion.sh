@@ -1,4 +1,4 @@
-source $GIT_ROOT/contrib/completion/git-completion.bash
+# source $GIT_ROOT/contrib/completion/git-completion.bash
 
 # want to have the branch name in the PS1 prompt?
 #
