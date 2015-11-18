@@ -10,7 +10,7 @@ export HISTCONTROL=ignorespace
 export TILDEARCH=osx
 
 # root of the git install
-export GIT_ROOT=/usr/local/git
+export GIT_ROOT=/usr
 
 # add git path
 export PATH=$GIT_ROOT/bin:$PATH
@@ -25,10 +25,14 @@ export PATH=/usr/local/mysql/bin:$PATH
 #export PATH=/usr/local/ActivePerl-5.10/bin:$PATH
 
 # Java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home
-export M2_HOME=$HOME/Applications/apache-maven-3.2.5
+export JAVA_HOME=/usr
+#export M2_HOME=/usr/share/maven
+export M2_HOME=/opt/apache-maven-3.3.3
+#$HOME/Applications/apache-maven-3.2.5
 export M2=$M2_HOME/bin
 export PATH=$M2:$PATH
+
+export SELENIUM_HOSTNAME='xeon.local'
 
 # phantomjs wrapper env
 # export PHANTOMJS_BIN=~/bin/phantomjs
