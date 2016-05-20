@@ -12,3 +12,5 @@
 [core]
 	pager = less -R
 	excludesfile = ~/.gitignore_global
+[rebase]
+	autoSquash = true
