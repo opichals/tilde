@@ -45,7 +45,7 @@ export PATH=$PATH:$HOME/.node_modules/bin
 export EDITOR=vi
 
 # grep options
-export GREP_OPTIONS="--color --exclude=\*.svn\*"
+alias grep="grep --color --exclude=\*.svn\*"
 
 # include all the profile shell scripts
 for f in ~/etc/profile.d/*.sh; do
