@@ -41,7 +41,7 @@ export SELENIUM_HOSTNAME='xeon.local'
 
 # default nodejs modules path (configured in ~/.npmrc)
 export NODE_PATH=$HOME/.node_modules/lib/node_modules
-export PATH=$PATH:$HOME/.node_modules/bin
+export PATH=$HOME/.node_modules/bin:$PATH
 
 # my favourite editor
 export EDITOR=vi
