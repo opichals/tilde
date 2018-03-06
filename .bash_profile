@@ -17,6 +17,8 @@ export PATH=$GIT_ROOT/bin:$PATH
 # set /usr/local/bin (machine custom executables)
 # and ~/bin (user custom executables) PATH
 export PATH=/usr/local/bin:$PATH:$HOME/bin
+# add python (e.g. pip --user)
+export PATH=$PATH:$HOME/Library/Python/2.7/bin
 # add php5
 export PATH=/usr/local/php5/bin:$PATH
 # add mysql
