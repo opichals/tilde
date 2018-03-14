@@ -25,6 +25,8 @@ export PATH=/usr/local/php5/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 # prepend perl v5.10 path
 #export PATH=/usr/local/ActivePerl-5.10/bin:$PATH
+# add mongodb
+export PATH="/usr/local/opt/mongodb@3.2/bin:$PATH"
 
 # Java
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
