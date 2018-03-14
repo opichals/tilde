@@ -27,10 +27,9 @@ export PATH=/usr/local/mysql/bin:$PATH
 #export PATH=/usr/local/ActivePerl-5.10/bin:$PATH
 
 # Java
-export JAVA_HOME=/usr
-#export M2_HOME=/usr/share/maven
-export M2_HOME=/opt/apache-maven-3.3.3
-#$HOME/Applications/apache-maven-3.2.5
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export M2_HOME=$HOME/Applications/apache-maven-3.3.9
 export M2=$M2_HOME/bin
 export PATH=$M2:$PATH
 
@@ -45,6 +44,7 @@ export PATH=$HOME/.node_modules/bin:$PATH
 
 # my favourite editor
 export EDITOR=vi
+export BROWSERS=Chrome
 
 # grep options
 alias grep="grep --color --exclude=\*.svn\*"
