@@ -2,7 +2,9 @@
 	name = Standa Opichal
 	email = opichals@gmail.com
 [alias]
+	hub = !hub
 	co = checkout
+	prum = pull --rebase upstream master
 	ulog = log --oneline
     llog = log --graph --decorate --format='%Cgreen%h %Cblue%aE %Cred%d %Creset%s' --abbrev-commit
 	mylog = log --author=opichals
