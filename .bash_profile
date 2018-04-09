@@ -35,7 +35,7 @@ export M2_HOME=$HOME/Applications/apache-maven-3.3.9
 export M2=$M2_HOME/bin
 export PATH=$M2:$PATH
 
-export SELENIUM_HOSTNAME='xeon.local'
+export SELENIUM_HOSTNAME=`hostname`
 
 # phantomjs wrapper env
 # export PHANTOMJS_BIN=~/bin/phantomjs
