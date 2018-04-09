@@ -18,3 +18,5 @@
 	autoSquash = true
 [diff]
 	compactionHeuristic = true
+[init]
+	templatedir = ~/.gittemplate
