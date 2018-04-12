@@ -1,0 +1,4 @@
+VPN_USER=`security find-generic-password -s "$VPN_OPENCONNECT_URL" | grep acct | cut -d \" -f 4`
+
+security find-generic-password -s "$VPN_OPENCONNECT_URL" -w | \
+openconnect --script-tun --script "ocproxy -D 8912" --no-proxy "$VPN_OPENCONNECT_URL" --user=$VPN_USER
