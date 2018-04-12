@@ -1,4 +1,8 @@
-VPN_USER=`security find-generic-password -s "$VPN_OPENCONNECT_URL" | grep acct | cut -d \" -f 4`
+#!/usr/bin/env bash
 
+VPN_USER=`security find-generic-password -s "$VPN_OPENCONNECT_URL" | grep acct | cut -d \" -f 4`
+[ -z "$VPN_USER" ] && echo -e "\nA '$VPN_OPENCONNECT_URL' application password keychain item could not be found!" && exit 1
+
+echo "Connecting as '$VPN_USER'"
 security find-generic-password -s "$VPN_OPENCONNECT_URL" -w | \
 openconnect --script-tun --script "ocproxy -D 8912" --no-proxy "$VPN_OPENCONNECT_URL" --user=$VPN_USER
