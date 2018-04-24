@@ -41,7 +41,6 @@ export SELENIUM_HOSTNAME=`hostname`
 # export PHANTOMJS_BIN=~/bin/phantomjs
 
 # default nodejs modules path (configured in ~/.npmrc)
-export NODE_PATH=$HOME/.node_modules/lib/node_modules
 export PATH=$HOME/.node_modules/bin:$PATH
 
 # my favourite editor
