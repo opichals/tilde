@@ -1,0 +1,73 @@
+###Setup steps
+#
+## Install xcode command line tools
+# xcode-select --install
+#
+## Checkout dotfiles
+# alias tildedotfiles="git --work-tree=$HOME --git-dir=$HOME/.tilde.git"
+# tildedotfiles init
+# tildedotfiles remote add origin git@github.com:opichals/tilde.git
+# tildedotfiles fetch
+#
+## Get the brew ready
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# brew tap homebrew/bundle
+#
+# cd .tildesetup
+# brew bundle
+#
+
+tap 'caskroom/cask'
+tap "homebrew/bundle"
+tap "homebrew/services"
+
+brew 'mas'
+
+## gtimeout, gps, etc
+# brew "coreutils"
+# brew "pstree"
+brew "watch"
+
+# JSON cli
+brew "jq"
+
+# VPN
+brew "ocproxy"
+brew "openconnect"
+
+# Storage
+brew "mongodb", restart_service: true
+brew "redis", restart_service: true
+
+# Networking
+brew "dnsmasq", restart_service: true
+
+# prg
+brew 'vim'
+brew "hub"
+brew 'heroku'
+brew 'awscli'
+
+# brew "nvm"
+# brew "python"
+brew 'node@8'
+
+# JIRA cli
+# tap "kylef/formulae"
+# brew "kylef/formulae/goji"
+
+# system tools
+cask 'spectacle'
+cask 'karabiner-elements'
+cask 'gpg-suite'
+cask 'docker'
+
+# IDEs
+cask 'visual-studio-code'
+
+# Browsers
+cask 'google-chrome'
+cask 'firefox'
+
+# App Store Things
+mas 'Slack', id: 803453959
