@@ -3,8 +3,15 @@ alias ll='ls -lFG'
 # rise the number of possibly open file descriptors
 ulimit -n 4096
 
-# do not put anything starting with a space into thistory
-export HISTCONTROL=ignorespace
+# keep bash long history
+export HISTFILESIZE=10000
+export HISTFILE=$HOME/.bash_history_long
+# do not put anything starting with a space into thistory & avoid duplicates
+export HISTCONTROL=ignorespace:ignoredups:erasedups
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+# After each command, append to the history file and reread it
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 # ~/bin/... links to ~/bin/$TILDEARCH/...
 export TILDEARCH=osx
