@@ -69,5 +69,8 @@ cask 'visual-studio-code'
 cask 'google-chrome'
 cask 'firefox'
 
+# tap "apiaryio/formulae"
+brew "apiaryio/formulae/blackbelt"
+
 # App Store Things
 mas 'Slack', id: 803453959
