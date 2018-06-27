@@ -1,5 +1,21 @@
-" turn leader to ',' instead of the default '\'
+" turn leader to ' ' instead of the default '\'
 let mapleader=" "
+
+"install VimPlug if not installed
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'wincent/command-t'
+Plug 'kchmck/vim-coffee-script'
+Plug 'sgur/vim-editorconfig'
+
+call plug#end()
+
 
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -70,6 +86,10 @@ au FileType make  set noexpandtab
 " using jj/jk is easier to type than ESC or C-[ for leaving insert mode
 inoremap jj <ESC>
 inoremap jk <ESC>
+
+" command-t to pwd
+let g:CommandTTraverseSCM = 'pwd'
+let g:CommandTFileScanner = 'find'
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
