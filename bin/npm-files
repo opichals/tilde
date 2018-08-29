@@ -1,0 +1,43 @@
+#!/bin/bash
+
+function maketemp {
+    local tmp=`mktemp -d -t npm-files`
+    function rmtemp {
+      rm -rf "$tmp"
+    }
+    trap rmtemp EXIT
+    echo $tmp
+}
+
+# creates a package named folder and extracts the npm module tarball into it
+function npmextract {
+    local PKG=$1
+    local TARBALL=`npm pack $PKG`
+    (mkdir $PKG && cd $PKG && tar xf ../${TARBALL})
+    echo $PKG
+}
+
+# lists the npm module tarball files
+function npmlistfiles {
+    local TMP=$(maketemp)
+    cd $TMP
+    local TARBALL=`npm pack $1`
+    tar tf $TARBALL
+    rm -rf $TMP
+}
+
+# does git diff on couple of npm modules' tarballs
+function npmdiff {
+    local TMP=$(maketemp)
+    cd $TMP
+    local M1=$(npmextract $1)
+    local M2=$(npmextract $2)
+    git diff --no-index -- $M1 $M2
+    rm -rf $TMP
+}
+
+if [[ "$2" ]]; then
+    npmdiff $1 $2
+else
+    npmlistfiles $1
+fi
