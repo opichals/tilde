@@ -1,6 +1,8 @@
 [user]
 	name = Standa Opichal
 	email = opichals@gmail.com
+[includeIf "gitdir:~/Dev/"]
+	path = ~/Dev/.gitconfig
 [alias]
 	hub = !hub
 	co = checkout
