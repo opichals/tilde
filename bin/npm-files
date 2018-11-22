@@ -13,8 +13,9 @@ function maketemp {
 function npmextract {
     local PKG=$1
     local TARBALL=`npm pack $PKG`
-    (mkdir $PKG && cd $PKG && tar xf ../${TARBALL})
-    echo $PKG
+    local PKGNAME=${PKG//\//--}
+    (mkdir $PKGNAME && cd $PKGNAME && tar xf ../${TARBALL})
+    echo $PKGNAME
 }
 
 # lists the npm module tarball files
@@ -32,7 +33,7 @@ function npmdiff {
     cd $TMP
     local M1=$(npmextract $1)
     local M2=$(npmextract $2)
-    git diff --no-index -- $M1 $M2
+    git diff --no-index -- "$M1" "$M2"
     rm -rf $TMP
 }
 
