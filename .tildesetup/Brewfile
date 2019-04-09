@@ -59,6 +59,7 @@ brew 'node@8'
 # system tools
 cask 'spectacle'
 cask 'karabiner-elements'
+cask 'flycut'
 cask 'gpg-suite'
 cask 'docker'
 
