@@ -50,7 +50,7 @@ brew 'awscli'
 
 # brew "nvm"
 # brew "python"
-brew 'node@10'
+brew 'node@12'
 
 # JIRA cli
 # tap "kylef/formulae"
