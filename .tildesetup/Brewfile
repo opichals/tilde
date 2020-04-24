@@ -57,6 +57,7 @@ brew 'node@10'
 # brew "kylef/formulae/goji"
 
 # system tools
+cask 'monitorcontrol'
 cask 'spectacle'
 cask 'karabiner-elements'
 cask 'flycut'
