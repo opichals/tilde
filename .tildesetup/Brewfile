@@ -63,6 +63,12 @@ cask 'flycut'
 cask 'gpg-suite'
 cask 'docker'
 
+# quick look plugins
+cask 'qlcolorcode'
+cask 'qlstephen'
+cask 'qlmarkdown'
+cask 'quicklook-json'
+
 # Security
 cask 'bitwarden'
 cask 'authy'
