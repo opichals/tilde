@@ -6,9 +6,10 @@
 [alias]
 	hub = !hub
 	co = checkout
+	b = rev-parse --abbrev-ref HEAD
 	prum = pull --rebase upstream master
 	ulog = log --oneline
-    llog = log --graph --decorate --format='%Cgreen%h %Cblue%aE %Cred%d %Creset%s' --abbrev-commit
+	llog = log --graph --decorate --date=local --format='%Cgreen%h %Creset %ad %Cblue%aE %Cred%d %Creset%s' --abbrev-commit
 	mylog = log --author=opichals
 	unstage = reset HEAD --
 [color]
