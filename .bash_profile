@@ -16,31 +16,37 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 # ~/bin/... links to ~/bin/$TILDEARCH/...
 export TILDEARCH=osx
 
-# root of the git install
-export GIT_ROOT=/usr
-
-# add git path
-export PATH=$GIT_ROOT/bin:$PATH
-# set /usr/local/bin (machine custom executables)
 # and ~/bin (user custom executables) PATH
-export PATH=/usr/local/bin:$PATH:$HOME/bin
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+# set /usr/local/sbin (machine custom executables)
+export PATH=/usr/local/sbin:$PATH
 # add python (e.g. pip --user)
-export PATH=$PATH:$HOME/Library/Python/2.7/bin
+export PATH=$PATH:$HOME/Library/Python/3.7/bin
 # add php5
 export PATH=/usr/local/php5/bin:$PATH
 # add mysql
 export PATH=/usr/local/mysql/bin:$PATH
+# ruby gems
+if which ruby >/dev/null && which gem >/dev/null; then
+    export PATH="$PATH:$(ruby -r rubygems -e 'puts Gem.dir')/bin"
+fi
 # prepend perl v5.10 path
 #export PATH=/usr/local/ActivePerl-5.10/bin:$PATH
 # add mongodb
 export PATH="/usr/local/opt/mongodb@3.2/bin:$PATH"
 
+# brew maven
+# export JAVA_HOME="/usr/local/opt/openjdk"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+export PATH="$JAVA_HOME/bin:$PATH"
+# export CPPFLAGS="-I$JAVA_HOME/include"
+
 # Java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export M2_HOME=$HOME/Applications/apache-maven-3.3.9
-export M2=$M2_HOME/bin
-export PATH=$M2:$PATH
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
+#export ANDROID_HOME=$HOME/Library/Android/sdk
+#export M2_HOME=$HOME/Applications/apache-maven-3.3.9
+#export M2=$M2_HOME/bin
+#export PATH=$M2:$PATH
 
 export SELENIUM_HOSTNAME=`hostname`
 
@@ -49,6 +55,9 @@ export SELENIUM_HOSTNAME=`hostname`
 
 # default nodejs modules path (configured in ~/.npmrc)
 export PATH=$HOME/.node_modules/bin:$PATH
+
+export KIAB_HOME="$HOME/bin/kiab-cli"
+export PATH="$KIAB_HOME/bin:$PATH"
 
 # my favourite editor
 export EDITOR=vi
@@ -69,4 +78,4 @@ export ftp_proxy=$HTTP_PROXY
 export rsync_proxy=$HTTP_PROXY
 #export no_proxy="localhost,127.0.0.0/8,172.16.0.0/12,192.168.0.0./16"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+source ~/.nvm/nvm.sh
