@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# For use with apps that don't consume stdin
+#
+# e.g. piping python script to python3 from a clipboard
+# ```
+# pbpaste | xfile python3
+# ```
+
+xfilestdin=$(mktemp /tmp/xfile-stdin.XXXXXX)
+trap "rm $xfilestdin" EXIT
+
+# stdin file
+cat - >$xfilestdin
+
+# execute the further args with the content of the stdin
+$@ $xfilestdin
