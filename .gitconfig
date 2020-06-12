@@ -8,6 +8,7 @@
 	co = checkout
 	b = rev-parse --abbrev-ref HEAD
 	prum = pull --rebase upstream master
+	proh = pull --rebase origin HEAD
 	ulog = log --oneline
 	llog = log --graph --decorate --date=local --format='%Cgreen%h %Creset %ad %Cblue%aE %Cred%d %Creset%s' --abbrev-commit
 	mylog = log --author=opichals
