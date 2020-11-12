@@ -199,6 +199,8 @@ define_keymap(re.compile("org.gnome.nautilus", re.IGNORECASE),{
 # Keybindings for Browsers
 define_keymap(re.compile(browserStr, re.IGNORECASE),{
     K("RC-Q"): K("RC-Q"),          # Close all browsers Instances
+    K("RC-Left"): K("M-Left"),     # Forward
+    K("RC-Right"): K("M-Right"),   # Backward
 })
 
 define_keymap(None,{
