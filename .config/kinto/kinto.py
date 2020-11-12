@@ -251,10 +251,12 @@ define_keymap(None,{
     # K("RC-Right"): K("C-RIGHT_BRACE"),            # Firefox-nw - Forward
     # K("RC-Left"): K("M-LEFT"),                    # Chrome-nw - Back
     # K("RC-Right"): K("M-RIGHT"),                  # Chrome-nw - Forward
-    K("RC-Up"): K("C-Home"),                      # Beginning of File
-    K("RC-Shift-Up"): K("C-Shift-Home"),          # Select all to Beginning of File
-    K("RC-Down"): K("C-End"),                     # End of File
-    K("RC-Shift-Down"): K("C-Shift-End"),         # Select all to End of File
+
+    # K("RC-Up"): K("C-Home"),                      # Beginning of File
+    # K("RC-Shift-Up"): K("C-Shift-Home"),          # Select all to Beginning of File
+    # K("RC-Down"): K("C-End"),                     # End of File
+    # K("RC-Shift-Down"): K("C-Shift-End"),         # Select all to End of File
+
     # K("M-Backspace"): K("Delete"),                # Chromebook/IBM - Delete
     K("Super-Backspace"): K("C-Backspace"),       # Default not-chromebook - Delete Left Word of Cursor
     K("Super-Delete"): K("C-Delete"),             # Default not-chromebook - Delete Right Word of Cursor
