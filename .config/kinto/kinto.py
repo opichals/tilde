@@ -270,10 +270,11 @@ define_keymap(None,{
 
 define_keymap(lambda wm_class: wm_class.casefold() not in mscodes,{
     # Wordwise remaining - for Everything but VS Code
-    K("M-Left"): K("C-Left"),               # Left of Word
-    K("M-Shift-Left"): K("C-Shift-Left"),   # Select Left of Word
-    K("M-Right"): K("C-Right"),             # Right of Word
-    K("M-Shift-Right"): K("C-Shift-Right"), # Select Right of Word
+    K("M-Left"): [K("M-F19"),K("C-Left"),K("M-F19")],                  # Left of Word
+    K("M-Right"): [K("M-F19"),K("C-Right"),K("M-F19")],                # Right of Word
+    K("M-Shift-Left"): [K("M-F19"),K("C-Shift-Left"),K("M-F19")],      # Select Left of Word
+    K("M-Shift-Right"): [K("M-F19"),K("C-Shift-Right"),K("M-F19")],    # Select Right of Word
+
     K("M-Shift-g"): K("C-Shift-g"),         # View source control
     # ** VS Code fix **
     #   Electron issue precludes normal keybinding fix.
