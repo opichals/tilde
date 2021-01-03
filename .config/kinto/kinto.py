@@ -320,6 +320,7 @@ define_keymap(re.compile(codeStr, re.IGNORECASE),{
     K("Shift-f3"): pass_through_key,            # cancel find_prev
     K("C-Shift-g"): K("Shift-f3"),              # find_prev
     K("Super-c"): K("LC-c"),                    # Sigints - interrupt
+    K("Super-v"): K("LC-v"),                    # vim ctrl+v block select
     # K("Super-C-g"): K("C-f2"),                  # Default - Sublime - find_all_under
     # K("C-M-g"): K("C-f2"),                      # Chromebook/IBM - Sublime - find_all_under
     # K("Super-Shift-up"): K("M-Shift-up"),       # multi-cursor up - Sublime
