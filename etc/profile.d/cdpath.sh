@@ -3,7 +3,7 @@
 # tab's location.
 #
 # Put this in your .bashrc or whatever.
- 
+
 pathed_cd () {
   if [ "$1" == "" ]; then
     cd
@@ -12,8 +12,11 @@ pathed_cd () {
   fi
   pwd > ~/.cdpath
 }
-alias cd="pathed_cd"
+
+if [ "$(ps -h -o comm= -p $$)" != "zsh" ]; then
+  alias cd="pathed_cd"
   
-if [ -f ~/.cdpath ]; then
-    cd "$(cat ~/.cdpath)"
+  if [ -f ~/.cdpath ]; then
+      cd "$(cat ~/.cdpath)"
+  fi
 fi
