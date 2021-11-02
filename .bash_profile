@@ -6,7 +6,7 @@ alias ll='ls -lFG'
 # rise the number of possibly open file descriptors
 ulimit -n 4096
 
-if [ "$(ps -h -o comm= -p $$)" != "zsh" ]; then
+if [ -z "$ZSH_VERSION" ]; then
   # keep bash long history
   export HISTFILESIZE=10000
   export HISTFILE=$HOME/.bash_history_long

@@ -1,12 +1,12 @@
-if [ "$(ps -h -o comm= -p $$)" = "zsh" ]; then
+if [ -n "$ZSH_VERSION" ]; then
     autoload -U compinit && compinit
     autoload -U bashcompinit && bashcompinit
 
-    for f in /usr/local/etc/zsh_completion.d/*; do
+    [[ -e $HOMEBREW_PREFIX/etc/zsh_completion.d ]] && for f in $HOMEBREW_PREFIX/etc/zsh_completion.d/*; do
        source $f
     done
 else
-    for f in /usr/local/etc/bash_completion.d/*; do
+    [[ -e $HOMEBREW_PREFIX/etc/bash_completion.d ]] && for f in $HOMEBREW_PREFIX/etc/bash_completion.d/*; do
         source $f
     done
 fi

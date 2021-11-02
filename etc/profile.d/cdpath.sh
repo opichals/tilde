@@ -13,7 +13,7 @@ pathed_cd () {
   pwd > ~/.cdpath
 }
 
-if [ "$(ps -h -o comm= -p $$)" != "zsh" ]; then
+if [ "$ZSH_VERSION" = "" ]; then
   alias cd="pathed_cd"
   
   if [ -f ~/.cdpath ]; then
