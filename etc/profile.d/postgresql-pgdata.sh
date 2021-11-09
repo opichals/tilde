@@ -1,0 +1,1 @@
+export PGDATA=$HOMEBREW_PREFIX/var/postgres
