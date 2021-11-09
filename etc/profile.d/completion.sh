@@ -11,3 +11,6 @@ else
     done
 fi
 
+complete -C `type -p terraform` terraform
+
+# [[ -e "/usr/local/Cellar/oci-cli/2.11.1/libexec/lib/python3.7/site-packages/oci_cli/bin/oci_autocomplete.sh" ]] && source "/usr/local/Cellar/oci-cli/2.11.1/libexec/lib/python3.7/site-packages/oci_cli/bin/oci_autocomplete.sh"

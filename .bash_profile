@@ -40,7 +40,7 @@ fi
 # prepend perl v5.10 path
 #export PATH=/usr/local/ActivePerl-5.10/bin:$PATH
 # add mongodb
-export PATH="/usr/local/opt/mongodb@3.2/bin:$PATH"
+# export PATH="/usr/local/opt/mongodb@3.2/bin:$PATH"
 
 # brew maven
 # export JAVA_HOME="/usr/local/opt/openjdk"
@@ -85,8 +85,4 @@ export ftp_proxy=$HTTP_PROXY
 export rsync_proxy=$HTTP_PROXY
 #export no_proxy="localhost,127.0.0.0/8,172.16.0.0/12,192.168.0.0./16"
 
-source ~/.nvm/nvm.sh
-
-complete -C /usr/local/bin/terraform terraform
-
-[[ -e "/usr/local/Cellar/oci-cli/2.11.1/libexec/lib/python3.7/site-packages/oci_cli/bin/oci_autocomplete.sh" ]] && source "/usr/local/Cellar/oci-cli/2.11.1/libexec/lib/python3.7/site-packages/oci_cli/bin/oci_autocomplete.sh"
+[[ -e ~/.nvm/nvm.sh ]] && source ~/.nvm/nvm.sh
