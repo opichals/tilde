@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'wincent/command-t'
 Plug 'kchmck/vim-coffee-script'
 Plug 'sgur/vim-editorconfig'
+Plug 'doums/darcula'
 
 call plug#end()
 
@@ -32,15 +33,22 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 
   if &t_Co > 256 || has("gui_running")
-      source $HOME/etc/vim-scripts/teal.vim
+      " source $HOME/etc/vim-scripts/teal.vim
+      colorscheme darcula
+
+      " reset cursor to be visible
+      highlight Cursor guifg=black guibg=white
+      highlight iCursor guifg=white guibg=steelblue
 
       " MacVIM shift+arrow-keys behavior (required in .vimrc)
       let macvim_hig_shift_movement = 1
 
       " Make gvim bigger by default
-      set columns=80 lines=68
+      set columns=120 lines=76
+      set linespace=4
 
       set guifont=DejaVu\ Sans\ Mono:h14
+      set guifont=DejaVuSansMono\ Nerd\ Font\ Mono:h14
       set guioptions=
   endif
 endif
