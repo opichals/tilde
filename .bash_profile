@@ -1,10 +1,16 @@
 # catalina zsh vs bash
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+# brew install to only do a single package
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 alias ll='ls -lFG'
 
 # rise the number of possibly open file descriptors
 ulimit -n 4096
+
+# fix Ctrl-R/Ctrl-S to search backwards/forwards
+stty -ixon
 
 if [ -z "$ZSH_VERSION" ]; then
   # keep bash long history
