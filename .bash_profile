@@ -69,9 +69,6 @@ export SELENIUM_HOSTNAME=`hostname`
 # default nodejs modules path (configured in ~/.npmrc)
 export PATH=$HOME/.node_modules/bin:$PATH
 
-export KIAB_HOME="$HOME/bin/kiab-cli"
-export PATH="$KIAB_HOME/bin:$PATH"
-
 # my favourite editor
 export EDITOR=vi
 export BROWSERS=Chrome
