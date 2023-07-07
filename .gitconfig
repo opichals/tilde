@@ -7,20 +7,35 @@
 	hub = !hub
 	co = checkout
 	b = rev-parse --abbrev-ref HEAD
+	browse = !git-browse
 	prum = pull --rebase upstream master
 	proh = pull --rebase origin HEAD
 	ulog = log --oneline
 	llog = log --graph --decorate --date=local --format='%Cgreen%h %Creset %ad %Cblue%aE %Cred%d %Creset%s' --abbrev-commit
+	logf = log -p --follow
 	mylog = log --author=opichals
+	ltags = log --tags --simplify-by-decoration --pretty='format:%Cgreen%h %Creset %ai %Cred%d%Creset'
 	unstage = reset HEAD --
+	recent = branch --sort=-committerdate --format='%(color:green)%(objectname:short)%(color:reset) %(authordate:short) %(color:red)(%(refname:short))%(color:reset) %(color:blue)[%(committerdate:relative)]%(color:reset) %(color:reset)%(subject)%(color:reset)'
+	recents = branch --sort=-committerdate --format='%(HEAD)%(color:yellow)%(refname:short) | %(color:bold green)%(committerdate:relative) | %(color:blue)%(subject)%(color:reset)' --color=always
 [color]
 	ui = auto
 [core]
 	pager = less -R
+	# pager = delta --diff-highlight
 	excludesfile = ~/.gitignore_global
 [rebase]
 	autoSquash = true
 [diff]
 	compactionHeuristic = true
+	colorMoved = default
+[merge]
+	conflictstyle = diff3
+[interactive]
+	diffFilter = delta --diff-highlight
 [init]
 	templatedir = ~/.gittemplate
+[delta]
+	line-numbers = true
+	navigate = true
+	side-by-side = false

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+remote=$(git remote -v | grep fetch | awk '{print $2}' | sed 's/:/\//' | sed 's/git@//' | sed 's/\.git//')
+path=$(git rev-parse --show-prefix)
+
+if [ "$1" == "--" ]; then
+    shift
+fi
+
+if [[ $remote == *"github"* ]]; then
+    url="https://$remote/tree/`git b`/$path$*"
+else
+    url="https://$remote/-/tree/`git b`/$path$*"
+fi
+open "$url"
