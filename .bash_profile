@@ -34,7 +34,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # set /usr/local/sbin (machine custom executables)
 export PATH=/usr/local/sbin:$PATH
 # add python (e.g. pip --user)
-export PATH=$PATH:$HOME/Library/Python/3.7/bin
+export PATH=$PATH:$(python3 -c 'import site; print(site.USER_BASE)')/bin
 # add php5
 export PATH=/usr/local/php5/bin:$PATH
 # add mysql
