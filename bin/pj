@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+#
+# Converts python dict string into JSON
+#
+# Usage:
+# % echo "{'value': 60284}" | pj
+# {"value": 60284}
+
+import json
+import sys
+
+print(json.dumps(eval(sys.stdin.read())))
