@@ -33,6 +33,8 @@
 	colorMoved = default
 [merge]
 	conflictstyle = diff3
+[absorb]
+    autoStageIfNothingStaged = true
 [interactive]
 	diffFilter = delta --diff-highlight
 [init]
