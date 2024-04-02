@@ -4,6 +4,9 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # brew install to only do a single package
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# Disable the Apple key-hold emoji & symbols select
+#defaults write -g ApplePressAndHoldEnabled 0
+
 alias ll='ls -lFG'
 
 # rise the number of possibly open file descriptors
