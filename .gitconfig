@@ -6,7 +6,9 @@
 [alias]
 	hub = !hub
 	co = checkout
-	b = rev-parse --abbrev-ref HEAD
+    a = !git-absorb
+    b = rev-parse --abbrev-ref HEAD
+    # b = branch --show-current
 	browse = !git-browse
 	prum = pull --rebase upstream master
 	proh = pull --rebase origin HEAD
