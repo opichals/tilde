@@ -28,8 +28,10 @@ brew 'mas'
 # brew "pstree"
 brew "watch"
 
-# JSON cli
+# JSON/YAML cli (jq, yq, xq, jless, ...)
 brew "jq"
+brew 'python-yq'
+brew 'jless'
 
 # VPN
 brew "ocproxy"
@@ -43,10 +45,20 @@ brew "redis", restart_service: true
 brew "dnsmasq", restart_service: true
 
 # prg
+brew 'git'
+brew 'git-absorb'
+brew 'git-delta'
+brew 'lazygit'
+
+brew 'httpie'
 brew 'vim'
-brew "hub"
-brew 'heroku'
+# brew "hub"
+# brew 'heroku'
 brew 'awscli'
+
+brew 'kubectl'
+brew 'helm'
+brew 'fluxcd/tap/flux'
 
 # brew "nvm"
 # brew "python"
@@ -58,11 +70,14 @@ brew 'node@12'
 
 # system tools
 cask 'monitorcontrol'
-cask 'spectacle'
+brew 'rectangle'
+# cask 'spectacle'
 cask 'karabiner-elements'
-cask 'flycut'
-cask 'gpg-suite'
-cask 'docker'
+brew 'espanso'
+brew 'ripgrep'
+# cask 'flycut'
+# cask 'gpg-suite'
+# cask 'docker'
 
 # quick look plugins
 cask 'qlcolorcode'
@@ -83,7 +98,29 @@ cask 'google-chrome'
 cask 'firefox'
 
 # tap "apiaryio/formulae"
-brew "apiaryio/formulae/blackbelt"
+# brew "apiaryio/formulae/blackbelt"
 
 # Other
 mas 'Slack', id: 803453959
+
+
+# Last update
+# brew 'nvm'
+# brew 'python@3.11'
+# brew 'poetry'
+# brew 'postgresql'
+#
+## for elis-backend
+# brew 'pybind11'
+# brew 're2'
+# brew 'zbar'
+# brew 'qpdf'
+# brew 'poppler'
+# brew 'libmagic'
+#
+## for uptime-tests
+# brew 'pipenv'
+#
+# SQL and structured pipes
+# brew 'nushell'
+# brew 'duckdb'
