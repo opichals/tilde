@@ -6,7 +6,6 @@
 [alias]
 	hub = !hub
 	co = checkout
-    a = !git-absorb
     b = rev-parse --abbrev-ref HEAD
     # b = branch --show-current
 	browse = !git-browse
@@ -34,7 +33,7 @@
 [merge]
 	conflictstyle = diff3
 [absorb]
-    autoStageIfNothingStaged = true
+	autoStageIfNothingStaged = true
 [interactive]
 	diffFilter = delta --diff-highlight
 [init]
