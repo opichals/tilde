@@ -105,6 +105,9 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 map <Leader>f :vimgrep <C-R>=expand("<cword>") . " **/*.js" <CR>
 
+" based on https://www.reddit.com/r/vim/comments/p18418/til_that_ctrlactrlx_can_incrementdecrement_a/
+set nrformats-=octal
+
 set tags=tags;/
 map <Leader>d :tag <C-R>=expand("<cword>") <CR> <CR>
 
