@@ -42,9 +42,5 @@ fi
 
 
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/standa.opichal/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 # Added by GDK bootstrap
 # source /Users/standa.opichal/.asdf/asdf.sh
