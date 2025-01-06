@@ -78,6 +78,16 @@ export BROWSERS=Chrome
 
 # grep options
 alias grep="grep --color --exclude=\*.svn\*"
+# ripgrep (rg) config file
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+
+# e.g. `jqq .message` (tolerates non-json lines in a stream)
+jqq() { jq -R ${@:1:-1} "fromjson? | ${@: -1}" }
+
+# kubectl krew plugins
+export PATH=$PATH:~/.krew/bin
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # include all the profile shell scripts
 for f in ~/etc/profile.d/*.sh; do
