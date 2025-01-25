@@ -53,7 +53,8 @@ fi
 
 # brew maven
 # export JAVA_HOME="/usr/local/opt/openjdk"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+export JAVA_HOME="/opt/homebrew/opt/openjdk"
 export PATH="$JAVA_HOME/bin:$PATH"
 # export CPPFLAGS="-I$JAVA_HOME/include"
 
