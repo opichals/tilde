@@ -96,10 +96,10 @@ for f in ~/etc/profile.d/*.sh; do
 done
 
 # use the ~/etc/profile.d configured values
-export http_proxy=$HTTP_PROXY
-export https_proxy=$HTTPS_PROXY
-export ftp_proxy=$HTTP_PROXY
-export rsync_proxy=$HTTP_PROXY
+#export http_proxy=$HTTP_PROXY
+#export https_proxy=$HTTPS_PROXY
+#export ftp_proxy=$HTTP_PROXY
+#export rsync_proxy=$HTTP_PROXY
 #export no_proxy="localhost,127.0.0.0/8,172.16.0.0/12,192.168.0.0./16"
 
 [[ -e ~/.nvm/nvm.sh ]] && source ~/.nvm/nvm.sh
