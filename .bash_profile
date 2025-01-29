@@ -17,7 +17,7 @@ stty -ixon
 
 if [ -z "$ZSH_VERSION" ]; then
   # keep bash long history
-  export HISTFILESIZE=10000
+  export HISTFILESIZE=10000000
   export HISTFILE=$HOME/.bash_history_long
   # do not put anything starting with a space into thistory & avoid duplicates
   export HISTCONTROL=ignorespace:ignoredups:erasedups
